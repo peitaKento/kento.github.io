@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'AR One Sans', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+
+.wrapper {
+    max-width: 100%;
+    margin: 0 auto 100px auto;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.section-title{
+    display: inline-block;
+    font-size: 2rem;
+    border-bottom: solid 1px #383e45;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+#header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+.site-title{
+    position: relative;
+    padding: 1.5rem 1.5rem calc(1.5rem + 10px);
+    border: 2px solid #000;
+}
+
+.site-title::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    content: '';
+    border-top: 2px solid #000;
+    background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+    background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+    background-size: 7px 7px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#header ul{
+    display: flex;
+    padding: 10px 0; 
+}
+
+#header li{
+    margin-left: 30px;
+}
+
+#header li a{
+    color: #24292e;
+    text-decoration: none;
+}
+
+#header li a:hover{
+    opacity: 0.6;
+}
+
+#mainImage img{
+    width: 100%; 
+    max-width: 1920px;
+    height: 500px;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width: 600px){
+
+    #mainImage img{
+        height: calc(100vh - 60vh);
+    }
+}
+
+#about .content{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#about img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 0;
+    margin: 50px; 
+}
+
+#about .text{
+    text-align: left;
+}
+
+#hobby ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0; 
+}
+
+@media screen and (max-width: 600px){
+    #about .content{
+        flex-direction: column;
+    }
+
+    #about img{
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+#hobby li > img{
+    width: 80%; 
+}
+
+.kazuma{
+    width: 100%;
+    height: 70%;
+}
+
+@media screen and (max-width: 600px){
+    #hobby ul{
+        flex-direction: column;
+    }
+    
+    
+    #hobby li > img{
+        width: 100%; 
+        margin-bottom: 30px;
+    }
+}
+
